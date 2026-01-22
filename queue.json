@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-01-22",
+    "slot": "17",
+    "pillar": "vehicle",
+    "format": "checklist",
+    "hook": "軽貨物ドライバーが毎日確認すべき5つのポイント",
+    "text": "軽貨物ドライバーが毎日確認すべき5つのポイント\n\n☑ 日常点検を実施した\n☑ 車検の期限を確認した\n☑ タイヤの状態を確認した\n☑ オイル交換時期を確認した\n☑ 燃費を記録した\n\n保存しておくと安心です\n\n#軽貨物 #ドライバー #車両管理",
+    "status": "approved",
+    "fingerprint": "manual_01_22_17",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-22",
+    "slot": "19",
+    "pillar": "ops",
+    "format": "story",
+    "hook": "配送効率を上げるために始めたこと",
+    "text": "配送効率を上げるために始めたこと\n\n毎日残業が続いていたので\n作業手順を見直してみた\n\n結果、1日30分の時短に成功\n\n同じ悩みの方、参考になれば\n\n#軽貨物 #ドライバー #業務効率化",
+    "status": "approved",
+    "fingerprint": "manual_01_22_19",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
     "date": "2026-01-23",
     "slot": "17",
     "pillar": "case",
