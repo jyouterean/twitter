@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "mcp__serena__list_dir",
+      "Bash(python3 -m pip install:*)",
+      "Bash(source:*)",
+      "Bash(SLOT=19 python:*)"
+    ]
+  }
+}

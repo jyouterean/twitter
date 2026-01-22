@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-01-22",
+    "slot": "17",
+    "pillar": "unpaid",
+    "format": "checklist",
+    "hook": "プロが必ず確認する未払い対策の5ポイント",
+    "text": "プロが必ず確認する未払い対策の5ポイント\n\n☑ 支払期日を明記した\n☑ 支払遅延を放置する\n☑ 与信確認をしない\n☑ 契約書に支払条件を明記した\n\n保存しておくと安心です",
+    "status": "approved",
+    "fingerprint": "8bf327d165d8c08308ce06001a2b7983e983a9fad5f0283f11e73bc8c9e8d98d",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-22",
+    "slot": "19",
+    "pillar": "tax",
+    "format": "story",
+    "hook": "税務対策の仕事をしていて感じること",
+    "text": "税務対策の仕事をしていて感じること\n\n初めての確定申告で困惑\n税理士から指摘を受けた\n\n経験者の方、共感しませんか",
+    "status": "approved",
+    "fingerprint": "5b2e7279de7a1ebcd7ad538aaa204385bb9681529f09a7a88efa469e9d5517fa",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-23",
+    "slot": "17",
+    "pillar": "case",
+    "format": "checklist",
+    "hook": "事例研究で失敗しないための3つのチェックリスト",
+    "text": "事例研究で失敗しないための3つのチェックリスト\n\n☑ 他人事として聞く\n☑ 自分のケースに当てはめた\n☑ 表面だけを見る\n☑ 自分には関係ないと思う\n\n迷ったときに見返してください",
+    "status": "approved",
+    "fingerprint": "c736e7973c233c26c3803c22d195aa7f878f1bca6339c7568bf036593be8128a",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-23",
+    "slot": "19",
+    "pillar": "tax",
+    "format": "story",
+    "hook": "税務対策について最近思うこと",
+    "text": "税務対策について最近思うこと\n\n経費にできることを知らなかった\n領収書がどこにあるかわからない\n\n業界あるあるかもしれません",
+    "status": "approved",
+    "fingerprint": "8f666c72c2c5fed15651a6f74e0a5302b6adcbe57716c68a4c812a008c679bb9",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-24",
+    "slot": "17",
+    "pillar": "unitprice",
+    "format": "checklist",
+    "hook": "プロが必ず確認する単価交渉の4ポイント",
+    "text": "プロが必ず確認する単価交渉の4ポイント\n\n☑ 原価割れで受注する\n☑ 相場より極端に安い\n☑ 交渉の落としどころを決めた\n☑ 値上げの根拠を準備した\n\n1つでも抜けると後悔します",
+    "status": "approved",
+    "fingerprint": "c411211f9fbd8ee745700d090ea2ae7a1a16f02e6ae793be3f38c1cf0f7a926a",
+    "tweet_id": null,
+    "posted_at_utc": null
+  },
+  {
+    "date": "2026-01-24",
+    "slot": "19",
+    "pillar": "case",
+    "format": "story",
+    "hook": "よくある事例研究の勘違い",
+    "text": "よくある事例研究の勘違い\n\n先輩から聞いた話\n業界の新しい動きについて\n\n意外と知らない人が多いです",
+    "status": "approved",
+    "fingerprint": "8e8538d25125cd57c97d4c7ab4e78478b5ff8de2bea4f32334fb0e590a575650",
+    "tweet_id": null,
+    "posted_at_utc": null
+  }
+]

@@ -1,0 +1,89 @@
+name: X Auto Post
+
+on:
+  schedule:
+    # 17:00 JST = 08:00 UTC
+    - cron: "0 8 * * *"
+    # 19:00 JST = 10:00 UTC
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot to post (17 or 19)"
+        required: true
+        default: "17"
+        type: choice
+        options:
+          - "17"
+          - "19"
+      dry_run:
+        description: "Dry run mode"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine slot from schedule
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "SLOT=${{ github.event.inputs.slot }}" >> $GITHUB_ENV
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              echo "DRY_RUN=--dry-run" >> $GITHUB_ENV
+            else
+              echo "DRY_RUN=" >> $GITHUB_ENV
+            fi
+          else
+            # Scheduled run: determine slot from cron schedule
+            if [ "${{ github.event.schedule }}" = "0 8 * * *" ]; then
+              echo "SLOT=17" >> $GITHUB_ENV
+            else
+              echo "SLOT=19" >> $GITHUB_ENV
+            fi
+            echo "DRY_RUN=" >> $GITHUB_ENV
+          fi
+
+      - name: Run post script
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_KEY_SECRET: ${{ secrets.X_API_KEY_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+          SLOT: ${{ env.SLOT }}
+        run: python src/post_slot.py ${{ env.DRY_RUN }}
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet queue.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add queue.json
+          git commit -m "Update queue.json after posting [slot=${{ env.SLOT }}]"
+          git push

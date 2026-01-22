@@ -1,0 +1,164 @@
+{
+  "templates": {
+    "17": [
+      {
+        "id": "checklist_basic",
+        "format": "checklist",
+        "structure": "{hook}\n\n{items}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}で失敗しないための{count}つのチェックリスト",
+          "{pillar_topic}を始める前に確認すべき{count}項目",
+          "プロが必ず確認する{pillar_topic}の{count}ポイント"
+        ],
+        "items_format": "checkbox",
+        "item_count": [4, 5, 6],
+        "closing_patterns": [
+          "保存しておくと安心です",
+          "迷ったときに見返してください",
+          "1つでも抜けると後悔します"
+        ]
+      },
+      {
+        "id": "template_form",
+        "format": "template",
+        "structure": "{hook}\n\n{template_body}\n\n{closing}",
+        "hook_patterns": [
+          "【保存版】{pillar_topic}の{action}テンプレート",
+          "そのまま使える{pillar_topic}の{action}フォーマット",
+          "コピペOK｜{pillar_topic}の{action}文例"
+        ],
+        "closing_patterns": [
+          "カスタマイズしてお使いください",
+          "状況に合わせて調整を",
+          "このまま使えます"
+        ]
+      },
+      {
+        "id": "howto_steps",
+        "format": "howto",
+        "structure": "{hook}\n\n{steps}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}の{action}手順を解説",
+          "初心者向け｜{pillar_topic}の{action}方法",
+          "3分でわかる{pillar_topic}の{action}"
+        ],
+        "steps_format": "numbered",
+        "step_count": [3, 4, 5],
+        "closing_patterns": [
+          "順番通りにやれば大丈夫",
+          "まずは①から始めてみて",
+          "慣れれば5分で終わります"
+        ]
+      },
+      {
+        "id": "checklist_caution",
+        "format": "checklist",
+        "structure": "{hook}\n\n{items}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}でやりがちな{count}つのミス",
+          "要注意｜{pillar_topic}の落とし穴{count}選",
+          "{pillar_topic}で損する人の共通点{count}つ"
+        ],
+        "items_format": "bullet",
+        "item_count": [3, 4, 5],
+        "closing_patterns": [
+          "1つでも当てはまったら要確認",
+          "知っているだけで防げます",
+          "早めの対処が大切です"
+        ]
+      },
+      {
+        "id": "howto_comparison",
+        "format": "howto",
+        "structure": "{hook}\n\n{comparison}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}の{option_a}と{option_b}の違い",
+          "どっちがいい？{pillar_topic}の{option_a} vs {option_b}",
+          "{pillar_topic}｜{option_a}と{option_b}を比較"
+        ],
+        "closing_patterns": [
+          "状況に応じて選んでください",
+          "迷ったら相談を",
+          "どちらにもメリットがあります"
+        ]
+      }
+    ],
+    "19": [
+      {
+        "id": "story_realcase",
+        "format": "story",
+        "structure": "{hook}\n\n{story_body}\n\n{lesson}",
+        "hook_patterns": [
+          "先日、{pillar_topic}の相談を受けた話",
+          "{pillar_topic}で困っていたお客様がいて",
+          "よくある{pillar_topic}の勘違い"
+        ],
+        "lesson_patterns": [
+          "意外と知らない人が多いです",
+          "参考になれば嬉しいです",
+          "同じ状況の方は要チェック"
+        ]
+      },
+      {
+        "id": "criteria_decision",
+        "format": "criteria",
+        "structure": "{hook}\n\n{criteria_body}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}で{action}すべきか迷ったら",
+          "{pillar_topic}の判断基準はシンプル",
+          "こういう人は{pillar_topic}の{action}を検討して"
+        ],
+        "closing_patterns": [
+          "当てはまる方は早めの行動を",
+          "迷ったらこの基準で考えて",
+          "シンプルに考えましょう"
+        ]
+      },
+      {
+        "id": "question_poll",
+        "format": "question",
+        "structure": "{hook}\n\n{options}\n\n{context}",
+        "hook_patterns": [
+          "{pillar_topic}について質問です",
+          "みなさんは{pillar_topic}どうしてますか？",
+          "ちょっと聞きたいことが"
+        ],
+        "context_patterns": [
+          "リプで教えてもらえると嬉しいです",
+          "意見が分かれるところですよね",
+          "正解はないと思ってます"
+        ]
+      },
+      {
+        "id": "story_insight",
+        "format": "story",
+        "structure": "{hook}\n\n{insight}\n\n{closing}",
+        "hook_patterns": [
+          "{pillar_topic}について最近思うこと",
+          "{pillar_topic}の仕事をしていて感じること",
+          "{count}年{pillar_topic}をやってきて気づいたこと"
+        ],
+        "closing_patterns": [
+          "みなさんはどう思いますか？",
+          "経験者の方、共感しませんか",
+          "業界あるあるかもしれません"
+        ]
+      },
+      {
+        "id": "criteria_case",
+        "format": "criteria",
+        "structure": "{hook}\n\n{case_description}\n\n{advice}",
+        "hook_patterns": [
+          "こんなケースの{pillar_topic}はどうする？",
+          "{pillar_topic}のよくある質問に答えます",
+          "{pillar_topic}で「こういう場合は？」への回答"
+        ],
+        "advice_patterns": [
+          "ケースバイケースですが基本はこう",
+          "まずは専門家に相談がベスト",
+          "一般論としてはこう考えます"
+        ]
+      }
+    ]
+  }
+}
