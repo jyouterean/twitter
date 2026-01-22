@@ -196,6 +196,20 @@ def generate_post_text(template: dict, pillar_data: dict, common: dict) -> tuple
     return hook, normalize_text(text)
 
 
+def generate_hashtags(lexicon: dict, pillar_key: str) -> str:
+    """ハッシュタグを生成"""
+    hashtags_config = lexicon.get("hashtags", {})
+    required = hashtags_config.get("required", [])
+    pillar_tags = hashtags_config.get("pillar", {}).get(pillar_key, [])
+
+    # 必須 + pillar別（1つランダム選択）
+    tags = required.copy()
+    if pillar_tags:
+        tags.append(random.choice(pillar_tags))
+
+    return " ".join(tags)
+
+
 def generate_single_post(
     date: str,
     slot: str,
@@ -227,6 +241,11 @@ def generate_single_post(
     else:
         # リトライ超過時も生成は続行
         pass
+
+    # ハッシュタグを追加
+    hashtags = generate_hashtags(lexicon, pillar_key)
+    if hashtags:
+        text = f"{text}\n\n{hashtags}"
 
     fingerprint = calculate_fingerprint(text)
 
